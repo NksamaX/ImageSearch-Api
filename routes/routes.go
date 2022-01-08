@@ -30,7 +30,7 @@ func Img(c *gin.Context) {
 }
 
 func images(name string) ([]string, error) {
-	res, err := soup.Get(fmt.Sprintf("https://ca.images.search.yahoo.com/search/images;_ylt=AwrJ7KMan9dhurIAGAy7HAx.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3BpdnM-?p=%v&fr2=piv-web&fr=sfp", name))
+	res, err := soup.Get(fmt.Sprintf("https://images.search.yahoo.com/search/images?ei=UTF-8&fr=sfp&p=%v&fr2=p%3As%2Cv%3Ai&.bcrumb=Ryn3rHm78Mm&save=0", name))
 	if err != nil {
 		return nil, err
 	}
